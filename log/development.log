@@ -1,0 +1,756 @@
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:17:26 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/adrien/.rvm/gems/ruby-2.3.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/adrien/.rvm/gems/ruby-2.3.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 226ms (Views: 9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:21:03 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/adrien/.rvm/gems/ruby-2.3.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/adrien/.rvm/gems/ruby-2.3.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 6ms (Views: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:26:49 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/adrien/.rvm/gems/ruby-2.3.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/adrien/.rvm/gems/ruby-2.3.4/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 9ms (Views: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:27:29 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 1360ms
+
+
+
+ActionView::MissingTemplate - Missing partial layout/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/adrien/thp/Rails_initiation/moussaillons/app/views"
+:
+  app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___1262406318177112962_36115980'
+
+Started POST "/__better_errors/ce8769c59a030130/variables" for 127.0.0.1 at 2018-01-31 21:27:31 +0100
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:28:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 37ms
+
+
+
+ActionView::MissingTemplate - Missing partial static_pages/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/adrien/thp/Rails_initiation/moussaillons/app/views"
+:
+  app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___1262406318177112962_69905927691880'
+
+Started POST "/__better_errors/05e61c2924e02995/variables" for 127.0.0.1 at 2018-01-31 21:28:15 +0100
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:29:31 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 31.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:52:42 +0100
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/5d5671a044948eec/variables" for 127.0.0.1 at 2018-01-31 21:52:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (21.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCorsairs (20180131204504)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "corsairs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "age" integer, "likeness" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180131204504"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-31 20:53:02.186375"], ["updated_at", "2018-01-31 20:53:02.186375"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:05 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 76.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:08 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:11 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:12 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:12 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:13 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:14 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:14 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:17 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:50 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:51 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:52 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:53:53 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:54:04 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:57:34 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...ption,html,body": expected selector or at-rule, was "{font-family:"H...":
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1262406318177112962_69905904459260'
+
+Started POST "/__better_errors/febfede9bb7ca9ec/variables" for 127.0.0.1 at 2018-01-31 21:57:34 +0100
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:14 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:19 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:19 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:20 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:23 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 21:58:24 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:03 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:03 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:03 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:04 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:04 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:04 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:04 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:00:05 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:17 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:17 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:01:20 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:03:57 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "...ption,html,body": expected selector or at-rule, was "{font-family:"H...":
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4351995899402867742_19249880'
+
+Started POST "/__better_errors/b4752c5e1c0fdbff/variables" for 127.0.0.1 at 2018-01-31 22:03:58 +0100
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:04:32 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:05:46 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 22:08:00 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/corsairs/new" for 127.0.0.1 at 2018-01-31 22:08:01 +0100
+
+NameError - uninitialized constant CorsairsController:
+
+Started POST "/__better_errors/b88d4f30f5c6aabe/variables" for 127.0.0.1 at 2018-01-31 22:08:01 +0100
+Started GET "/corsairs/new" for 127.0.0.1 at 2018-01-31 22:08:11 +0100
+
+NameError - uninitialized constant CorsairsController:
+
+Started POST "/__better_errors/4f8c5356a18120d5/variables" for 127.0.0.1 at 2018-01-31 22:08:11 +0100
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:08:16 +0100
+
+NameError - uninitialized constant CorsairsController:
+
+Started POST "/__better_errors/33e5a9f824590d28/variables" for 127.0.0.1 at 2018-01-31 22:08:16 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:11:06 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+NameError - uninitialized constant CorsairsController:
+
+Started POST "/__better_errors/4e46c3f2727e13e2/variables" for 127.0.0.1 at 2018-01-31 22:11:07 +0100
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:12:47 +0100
+
+NameError - uninitialized constant CorsairsController:
+
+Started POST "/__better_errors/0e72bacac7a6d5ce/variables" for 127.0.0.1 at 2018-01-31 22:12:47 +0100
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:14:06 +0100
+
+NameError - uninitialized constant CorsairsController:
+
+Started POST "/__better_errors/be82927dcef85fb7/variables" for 127.0.0.1 at 2018-01-31 22:14:06 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:16:19 +0100
+
+NameError - uninitialized constant CorsairsController:
+
+Started POST "/__better_errors/4914d5701036cd76/variables" for 127.0.0.1 at 2018-01-31 22:16:19 +0100
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:16:48 +0100
+Processing by CorsairsController#index as HTML
+Completed 406 Not Acceptable in 23ms
+
+
+
+ActionController::UnknownFormat - CorsairsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/43e000937ed3f484/variables" for 127.0.0.1 at 2018-01-31 22:16:49 +0100
+  [1m[36mCorsair Load (0.8ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Corsair Load (0.0ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Corsair Load (0.0ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Corsair Load (0.0ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:17:54 +0100
+Processing by CorsairsController#index as HTML
+  Rendering corsairs/index.html.erb within layouts/application
+  [1m[36mCorsair Load (0.2ms)[0m  [1m[34mSELECT "corsairs".* FROM "corsairs"[0m
+  Rendered corsairs/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/corsairs/new" for 127.0.0.1 at 2018-01-31 22:17:56 +0100
+Processing by CorsairsController#new as HTML
+  Rendering corsairs/new.html.erb within layouts/application
+  Rendered corsairs/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/corsairs/new" for 127.0.0.1 at 2018-01-31 22:19:39 +0100
+Processing by CorsairsController#new as HTML
+  Rendering corsairs/new.html.erb within layouts/application
+  Rendered corsairs/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/corsairs/new" for 127.0.0.1 at 2018-01-31 22:20:23 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CorsairsController#new as HTML
+  Rendering corsairs/new.html.erb within layouts/application
+  Rendered corsairs/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 22.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/corsairs/new" for 127.0.0.1 at 2018-01-31 22:21:46 +0100
+Processing by CorsairsController#new as HTML
+  Rendering corsairs/new.html.erb within layouts/application
+  Rendered corsairs/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 5367ms (Views: 5365.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:21:54 +0100
+Processing by CorsairsController#index as HTML
+  Rendering corsairs/index.html.erb within layouts/application
+  [1m[36mCorsair Load (0.2ms)[0m  [1m[34mSELECT "corsairs".* FROM "corsairs"[0m
+  Rendered corsairs/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/corsairs/new" for 127.0.0.1 at 2018-01-31 22:21:56 +0100
+Processing by CorsairsController#new as HTML
+  Rendering corsairs/new.html.erb within layouts/application
+  Rendered corsairs/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/corsairs" for 127.0.0.1 at 2018-01-31 22:22:07 +0100
+Processing by CorsairsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0LQyTAklo357yeU2q9aXiMfGK6sgR3cfF4vl36nzKd4XqggDwit2vreZZmsqzjxwQSIGGVFSJFptRoA6Vo9M3g==", "corsair"=>{"first_name"=>"Adrien", "age"=>"19"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "corsairs" ("first_name", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Adrien"], ["age", 19], ["created_at", "2018-01-31 21:22:07.622917"], ["updated_at", "2018-01-31 21:22:07.622917"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/corsairs/1
+Completed 302 Found in 26ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/corsairs/1" for 127.0.0.1 at 2018-01-31 22:22:07 +0100
+Processing by CorsairsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCorsair Load (3.5ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering corsairs/show.html.erb within layouts/application
+  Rendered corsairs/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 55.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:22:24 +0100
+Processing by CorsairsController#index as HTML
+  Rendering corsairs/index.html.erb within layouts/application
+  [1m[36mCorsair Load (0.3ms)[0m  [1m[34mSELECT "corsairs".* FROM "corsairs"[0m
+  Rendered corsairs/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/corsairs/1" for 127.0.0.1 at 2018-01-31 22:22:27 +0100
+Processing by CorsairsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCorsair Load (0.4ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering corsairs/show.html.erb within layouts/application
+  Rendered corsairs/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/corsairs/1/edit" for 127.0.0.1 at 2018-01-31 22:22:28 +0100
+Processing by CorsairsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCorsair Load (0.2ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering corsairs/edit.html.erb within layouts/application
+  Rendered corsairs/edit.html.erb within layouts/application (166.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 217ms (Views: 214.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/corsairs/1" for 127.0.0.1 at 2018-01-31 22:22:31 +0100
+Processing by CorsairsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G3slRJeH7vXCJaQ/Ve+XR/gIT4xw3HmQB20LXLn8mu0ad2r7+zG79qvrZvmf9oxHCmvY2/JGdCsEr6DM7jClCw==", "corsair"=>{"first_name"=>"Adrien", "age"=>"19", "likeness"=>"kebab"}, "id"=>"1"}
+  [1m[36mCorsair Load (0.4ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "corsairs" SET "likeness" = ?, "updated_at" = ? WHERE "corsairs"."id" = ?[0m  [["likeness", "kebab"], ["updated_at", "2018-01-31 21:22:31.994640"], ["id", 1]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/corsairs
+Completed 302 Found in 15ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:22:32 +0100
+Processing by CorsairsController#index as HTML
+  Rendering corsairs/index.html.erb within layouts/application
+  [1m[36mCorsair Load (0.3ms)[0m  [1m[34mSELECT "corsairs".* FROM "corsairs"[0m
+  Rendered corsairs/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/corsairs/1" for 127.0.0.1 at 2018-01-31 22:22:33 +0100
+Processing by CorsairsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCorsair Load (0.1ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering corsairs/show.html.erb within layouts/application
+  Rendered corsairs/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/corsairs/1/edit" for 127.0.0.1 at 2018-01-31 22:22:37 +0100
+Processing by CorsairsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCorsair Load (0.2ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering corsairs/edit.html.erb within layouts/application
+  Rendered corsairs/edit.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/corsairs/1" for 127.0.0.1 at 2018-01-31 22:23:10 +0100
+Processing by CorsairsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXhJHXuW7iAXOexb2Js8p2T4c+8Kp6K6yc/FMMijoGo8dAaiFyC7I373Lp0SgienlpvkuIg9rwHKDW6gn2+fjA==", "corsair"=>{"first_name"=>"Adrien", "age"=>"19", "likeness"=>"kebab"}, "id"=>"1"}
+  [1m[36mCorsair Load (0.1ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/corsairs
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:23:10 +0100
+Processing by CorsairsController#index as HTML
+  Rendering corsairs/index.html.erb within layouts/application
+  [1m[36mCorsair Load (0.2ms)[0m  [1m[34mSELECT "corsairs".* FROM "corsairs"[0m
+  Rendered corsairs/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/corsairs/1" for 127.0.0.1 at 2018-01-31 22:23:16 +0100
+Processing by CorsairsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCorsair Load (0.3ms)[0m  [1m[34mSELECT  "corsairs".* FROM "corsairs" WHERE "corsairs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering corsairs/show.html.erb within layouts/application
+  Rendered corsairs/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/corsairs" for 127.0.0.1 at 2018-01-31 22:23:18 +0100
+Processing by CorsairsController#index as HTML
+  Rendering corsairs/index.html.erb within layouts/application
+  [1m[36mCorsair Load (0.2ms)[0m  [1m[34mSELECT "corsairs".* FROM "corsairs"[0m
+  Rendered corsairs/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
